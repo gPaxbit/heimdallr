@@ -29,7 +29,7 @@ $(function() {
 		}
 	});
 
-	$('.matches').on('click', 'tbody td', function() {
+	$('body').on('click', 'td', function() {
 		var e=this;
 		if(window.getSelection){
 			var s=window.getSelection();
@@ -73,9 +73,6 @@ $(function() {
 				case 'add':
 					$('.overlay').fadeIn(300);
 					EscapeSearch();
-					break;
-				case 'group':
-					return false;
 					break;
 			}
 		});		

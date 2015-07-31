@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Heim</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	
 	<link rel="stylesheet" href="./res/css/main.css" />
 	<link rel="stylesheet" href="./res/css/jquery-ui.min.css" />
@@ -26,15 +28,13 @@
 				<li><a href="#ftp" data-hash="ftp" class="trigger ftp"><i class="icon">&#xe814;</i>FTP-Access</a>
 					<ul class="sub">
 						<li><a href="#ftp-show" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
-						<li><a href="#ftp-add" data-event="add"><i class="icon">&#xe80f;</i>Add new</a></li>
-						<li class="inactive"><a href="#ftp-group" data-event="group"><i class="icon">&#xe80e;</i>Add group</a></li>
+						<li><a href="#ftp-add" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
 					</ul>
 				</li>
 				<li><a href="#pwd" data-hash="pwd" class="trigger pwd"><i class="icon">&#xe811;</i>Passwords</a>
 					<ul class="sub">
 						<li><a href="#pwd-show" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
-						<li><a href="#pwd-add" data-event="add"><i class="icon">&#xe80f;</i>Add new</a></li>
-						<li class="inactive"><a href="#pwd-group" data-event="group"><i class="icon">&#xe80e;</i>Add group</a></li>
+						<li><a href="#pwd-add" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
 					</ul>
 				</li>
 				<li><a href="#note" data-hash="note" class="trigger note"><i class="icon">&#xe813;</i>Notes</a>

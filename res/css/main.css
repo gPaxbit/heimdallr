@@ -34,6 +34,7 @@
 .icon {
 	font-family: 'icon';
 	font-style: normal;
+	font-weight: 500;
 }
 
 html, body {
@@ -148,6 +149,59 @@ html, body {
     padding: 20px 40px 20px 30px;
     height: 100%;
 }
+
+#result .header {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px #6ce solid;
+    text-transform: uppercase;
+    padding: 0 10px 10px;
+}
+#result .header i {
+    font-size: .9em;
+    vertical-align: bottom;
+ }
+#result table {
+    width: 100%;
+    margin-bottom: 40px;
+}
+#result table tr {
+    height: 30px;
+    border-bottom: 1px #EDFAFF solid;
+}
+#result table thead tr {
+    height: 30px;
+    background: #EDFAFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+}
+#result table thead tr td:empty {
+    width: 2%;
+}
+#result table tr:last-of-type {
+    border-bottom: none;
+}
+#result table tr td {
+    width: 18.8%;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 13px;
+}
+#result table tr td:first-of-type {
+    text-align: left;
+}
+#result table tr td.event {
+    width: 2% !important;
+    text-align: center !important;
+}
+#result table tr td.event a {
+    text-decoration: none;
+}
+
 .beforeUnload {
     position: absolute;
     top: 50%;
