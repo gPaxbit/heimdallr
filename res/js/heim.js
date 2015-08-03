@@ -12,6 +12,8 @@ function EscapeSearch() {
 	});
 }
 
+
+
 $(function() {
 	
 	$('.trigger').click(function() {

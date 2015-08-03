@@ -25,28 +25,28 @@
 		<div class="sideNav">
 			<h1><a href="/">HEIMDALLR</a></h1>
 			<ul class="main">
-				<li><a href="#ftp" data-hash="ftp" class="trigger ftp"><i class="icon">&#xe814;</i>FTP-Access</a>
+				<li><a href="#" data-hash="ftp" class="trigger ftp"><i class="icon">&#xe814;</i>FTP-Access</a>
 					<ul class="sub">
-						<li><a href="#ftp-show" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
-						<li><a href="#ftp-add" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
+						<li><a href="#" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
+						<li><a href="#" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
 					</ul>
 				</li>
-				<li><a href="#pwd" data-hash="pwd" class="trigger pwd"><i class="icon">&#xe811;</i>Passwords</a>
+				<li><a href="#" data-hash="pwd" class="trigger pwd"><i class="icon">&#xe811;</i>Passwords</a>
 					<ul class="sub">
-						<li><a href="#pwd-show" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
-						<li><a href="#pwd-add" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
+						<li><a href="#" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
+						<li><a href="#" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
 					</ul>
 				</li>
-				<li><a href="#note" data-hash="note" class="trigger note"><i class="icon">&#xe813;</i>Notes</a>
+				<li><a href="#" data-hash="note" class="trigger note"><i class="icon">&#xe813;</i>Notes</a>
 					<ul class="sub">
-						<li><a href="#note-show" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
-						<li><a href="#note-add" data-event="add"><i class="icon">&#xe80f;</i>Add note</a></li>
+						<li><a href="#-" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
+						<li><a href="#" data-event="add"><i class="icon">&#xe80f;</i>Add note</a></li>
 					</ul>    
 				</li>
-				<li><a href="#search" data-hash="search" class="trigger"><i class="icon">&#xe815;</i>Search</a></li>
-				<li><a href="#setting" data-hash="sett" class="trigger"><i class="icon">&#xe801;</i>Setting</a></li>
+				<li><a href="#" data-hash="search" class="trigger"><i class="icon">&#xe815;</i>Search</a></li>
+				<li><a href="#" data-hash="sett" class="trigger"><i class="icon">&#xe801;</i>Setting</a></li>
 				<li><span></span></li>
-				<li><a href="#about" data-hash="heim" class="trigger"><i class="icon">&#xe805;</i>About heim</a></li>
+				<li><a href="#" data-hash="heim" class="trigger"><i class="icon">&#xe805;</i>About heim</a></li>
 			</ul>
 		</div>
 

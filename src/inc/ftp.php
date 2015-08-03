@@ -1,10 +1,6 @@
 <?php
 
-	class MyDB extends SQLite3 {
-		function __construct() {
-			$this->open('../db/main.db');
-		}
-	}
+	include $_SERVER['DOCUMENT_ROOT'].'/lib/connect.php';
 
 	function numrows($result) {
 		$c = 0;
@@ -13,9 +9,6 @@
 		}
 		return $c;
 	}
-
-	$db = new MyDB();
-	if(!$db) echo $db->lastErrorMsg();
 
 	$group = 'SELECT * FROM [group] WHERE [parent] = "ftp"';
 	$group_row = $db->query($group);
@@ -26,7 +19,9 @@
 		$ftp = 'SELECT * FROM [ftp] WHERE [group] = "'.$row['name'].'"';
 		$ftp_row = $db->query($ftp);
 
-		echo '<div class="header"><i class="icon">&#xe803;</i> '.$row['name'].'</div>';
+		//echo $_SERVER['DOCUMENT_ROOT'];
+
+		echo '<div id="ftp"><div class="header"><i class="icon">&#xe803;</i> '.$row['name'].'</div>';
 		echo '<table>';
 		echo '<thead><tr>';
 		echo '<td>Name</td><td>Host</td><td>Login</td><td>Password</td><td>Port</td>';
@@ -45,7 +40,7 @@
 				echo '</tr>';
 			}
 
-		echo '</table>';
+		echo '</table></div>';
 	}
 		
 	$db->close();

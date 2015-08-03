@@ -1,7 +1,7 @@
 <?php
 	class MyDB extends SQLite3 {
 		function __construct() {
-			$this->open('../src/db/main.db');
+			$this->open($_SERVER['DOCUMENT_ROOT'].'/src/db/main.db');
 		}
 	}
 
