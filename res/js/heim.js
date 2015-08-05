@@ -55,6 +55,48 @@ $(function() {
 		}
 	});
 
+	$('body').on('click', '.cftp', function() {
+
+		var $prnt = $(this).closest('tr');
+		var $val = [];
+		var $blank = $('.blank');
+
+		$prnt.find('td').each(function() {
+			$val.push($(this).text());
+			return $val;
+		});
+		$val = $val.slice(1, 5);
+
+		if($blank.hasClass('active')) {
+			$blank.find('#host').val($val[0]);
+			$blank.find('#login').val($val[1]);
+			$blank.find('#pwd').val($val[2]);
+			$blank.find('#port').val($val[3]);
+		} else {
+			$blank.toggleClass('active');
+			$blank.find('#host').val($val[0]);
+			$blank.find('#login').val($val[1]);
+			$blank.find('#pwd').val($val[2]);
+			$blank.find('#port').val($val[3]);
+		}
+
+		console.log($val+" /connect");
+
+		return false;
+	});
+
+	$('body').click(function() {
+		if($('.blank').hasClass('active')) {
+			$('.blank').removeClass('active');
+			$('.blank').find('[type="text"]').each(function() {
+				$(this).val('');
+			});
+		}
+		$('[data-event="connect"], .blank, .main > li > a').click(function(e) {
+			e.stopPropagation();
+		});
+	});
+
 	$('.overlay').click(function() {
 		$('.search').animate({'top': '-110%'}, 600)
 			.find('[type="text"]').val('');
@@ -76,6 +118,8 @@ $(function() {
 					$('.overlay').fadeIn(300);
 					EscapeSearch();
 					break;
+				case 'connect':
+					$('.blank').toggleClass('active');
 			}
 		});		
 		return false;

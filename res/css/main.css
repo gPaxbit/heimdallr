@@ -23,9 +23,10 @@
 * {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin: 0;padding: 0;border-collapse: collapse;font-family: Ubuntu;color: #444;}
 .icon {font-family: 'icon';font-style: normal;font-weight: 500;}
 html, body {height: 100%;}
+a:hover { color: #69C0E4; text-decoration: none !important;}
 .wrapper {height: 100%;}
 .wrapper .sideNav {position: fixed;left: 0;top: 0;width: 180px;height: 100%;min-height: 260px;padding: 20px;z-index: 2;box-shadow: 1px 0px 15px -6px #555;z-index: 999;background-color: #fff;}
-.wrapper .sideNav h1 {font-weight: 500;font-size: 20px;text-decoration: none;margin-bottom: 25px;}
+.wrapper .sideNav h1 {font-weight: 500;font-size: 20px;text-decoration: none;margin-bottom: 25px;line-height: 1;}
 .wrapper .sideNav h1 a {text-decoration: none;}
 .wrapper .sideNav ul {list-style: none;}
 .wrapper .sideNav ul li {line-height: 1;display: inline-block;width: 100%;margin-bottom: 5px;}
@@ -45,11 +46,19 @@ html, body {height: 100%;}
 
 
 #result {float: left;width: 100%;padding: 20px 40px 20px 30px;height: 100%;}
-#result .header {font-size: 18px;font-weight: 700;line-height: 1;margin-bottom: 10px;padding-bottom: 10px;border-bottom: 1px #6ce solid;text-transform: uppercase;padding: 0 10px 10px;}
-#result .header i {font-size: .9em;vertical-align: bottom;}
-#result table {width: 100%;margin-bottom: 40px;}
-#result table tr {height: 30px;border-bottom: 1px #EDFAFF solid;}
-#result table thead tr {height: 30px;background: #EDFAFF;text-transform: uppercase;font-weight: 700;font-size: 13px;}
+#result .header {font-size: 18px;font-weight: 500;line-height: 1;margin-bottom: 0px;border-bottom: 1px #6ce solid;text-transform: uppercase;padding: 0 10px 10px;display: inline-block;width: 100%;float: left;}
+#result .header i {font-size: 0.9em;vertical-align: bottom;float: left;margin-right: 10px;line-height: 20px;}
+#result .header span {float: left;line-height: 18px;}
+#result .header a {float: right;line-height: 20px;text-decoration: none;margin-left: 15px;font-size: 18px;}
+
+#rnm-gform {display: inline-block;float: left;height: 20px;}
+#rnm-gform [type="text"] {border: none;font-size: 14px;line-height: 16px;float: left;height: 20px;width: 140px;border-bottom: 1px #6CE solid;outline: none;padding: 0 0px 4px;}
+#rnm-gform [type="submit"] {float: left;height: 20px;border: none;background-color: #6CE;color: #fff;margin-left: 15px;width: 80px;line-height: 16px;text-transform: uppercase;font-size: 12px;cursor: pointer;}
+#rnm-gform a {float: left !important;margin-left: 10px;font-size: 12px !important;text-transform: none !important;text-decoration: underline;}
+
+#result table {width: 100%;margin-bottom: 50px;float: left;}
+#result table tr {height: 26px;border-bottom: 1px #EDFAFF solid;}
+#result table thead tr {height: 26px;background: #EDFAFF;text-transform: uppercase;font-weight: 700;font-size: 13px;}
 #result table thead tr td:empty {width: 2%;}
 #result table tr:last-of-type {border-bottom: none;}
 #result table tr td {width: 18.8%;padding: 0 10px;text-align: center;font-size: 13px;}
@@ -58,7 +67,28 @@ html, body {height: 100%;}
 #result table tr td.event a {text-decoration: none;}
 #result table tr td.event a:hover { color: #69C0E4;}
 
-.wrapper .blank {}
+#result > div {display: inline-block; width: 100%;}
+
+#result #pwd {width: 72%;min-width: 500px;}
+#result #pwd table td {width: 30%;text-align: left;}
+
+.sideRight {position: fixed;right: -300px;top: 0;width: 280px;max-width: 450px;padding: 20px;height: 100%;background-color: #fff;box-shadow: -1px 0px 15px -6px #555;-webkit-transition: all .3s linear;      -moz-transition: all .3s linear;      -ms-transition: all .3s linear;      -o-transition: all .3s linear;      transition: all .3s linear;}
+.sideRight.active {right: 0px;}
+.sideRight h3 {font-size: 18px;line-height: 1;margin-bottom: 25px;font-weight: 500;color: #444;}
+.sideRight [type="text"] {float: left; height: 30px; padding: 0 10px; border: none; border-bottom: 1px solid #69C0E4; line-height: 30px; outline: none; color: #69C0E4; width: 100%; margin-bottom: 10px;}
+.sideRight [type="submit"] { width: 60%; margin-right: 10%; height: 34px; color: #FFF; background-color: #69C0E4; border: none; cursor: pointer; margin-top: 25px; text-transform: uppercase; outline: none;}
+.sideRight a {font-size: 14px;line-height: 34px;}
+.sideRight a:hover {color: #69C0E4; text-decoration: none;}
+.sideRight select {float: left; height: 30px; padding: 0 5px; border: none; border-bottom: 1px solid #69C0E4; line-height: 30px; outline: none; color: #69C0E4; width: 100%; margin-bottom: 10px; cursor: pointer;}
+
+.wrapper .blank {width: 440px;padding: 20px 20px 20px 200px;box-shadow: 1px 0px 15px -6px #555;height: 100%;position: fixed;top: 0;left: -480px; z-index: 888;background-color: #fff;-webkit-transition: all .3s linear;-moz-transition: all .3s linear;-ms-transition: all .3s linear;-o-transition: all .3s linear;transition: all .3s linear;}
+.wrapper .blank.active {left: 0;}
+#connect-ftp [type="text"] { float: left; height: 30px; padding: 0 10px; border: none; border-bottom: 1px solid #69C0E4; line-height: 30px; outline: none; color: #69C0E4;width: 100%;margin-bottom: 10px;}
+#connect-ftp [type="submit"] {width: 100%;height: 34px;color: #fff;background-color: #69C0E4;border: none;cursor: pointer;margin-top: 25px;text-transform: uppercase;outline: none;}
+#connect-ftp h3 {font-size: 18px;line-height: 1;margin-bottom: 25px;font-weight: 500;color: #444;}
+#connect-ftp label {width: 100%;display: inline-block;margin-top: 10px;}
+#connect-ftp label input {display: inline-block;vertical-align: text-bottom;}
+#connect-ftp label span {display: inline-block;vertical-align: middle;font-size: 14px;line-height: 1;margin-left: 5px;color: #69C0E4;}
 
 .about {width: 55%;min-width: 400px;}
 .about h2 {font-size: 32px; line-height: 1;}
@@ -82,3 +112,8 @@ html, body {height: 100%;}
 .search .matches table thead tr {background-color: #EDFAFF;font-weight: 700;}
 .search .matches table tr td {width: 25%;font-size: 13px;padding: 0 10px;}
 .search .matches table thead td {width: 25%;font-size: 12px;padding: 0 10px;}
+
+.wait {position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 9999;background-color: rgba(255, 255, 255, 0.7);display: none;}
+.wait img {position: absolute;top: 40%;left: 50%;margin-top: -40px;margin-left: -30px;}
+
+.notify {position: fixed;font-size: 14px;font-weight: 700;top: -210px;left: 200px;z-index: 999;background-color: #B2F8A7;padding: 10px 20px;line-height: 1;border-radius: 3px;box-shadow: 0px 1px 5px -2px #555;height: 34px;display: block;}

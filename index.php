@@ -16,6 +16,7 @@
 	<script src="/res/js/jquery.mousewheel.js"></script>
 	<script src="/res/js/heim.js"></script>
 	<script src="/res/js/search.js"></script>
+	<script src="/res/js/event.js"></script>
 	<script src="/res/js/add.js"></script>
 	
 </head>
@@ -29,6 +30,7 @@
 					<ul class="sub">
 						<li><a href="#" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
 						<li><a href="#" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
+						<li><a href="#" data-event="connect"><i class="icon">&#xe802;</i>Connect</a></li>
 					</ul>
 				</li>
 				<li><a href="#" data-hash="pwd" class="trigger pwd"><i class="icon">&#xe811;</i>Passwords</a>
@@ -56,7 +58,17 @@
 			</div>
 		</div>
 
-		<div class="blank"></div>
+		<div class="blank">
+			<form method="POST" id="connect-ftp">
+				<h3>Connect to ftp</h3>
+				<input type="text" name="host" id="host" placeholder="Host" />
+				<input type="text" name="login" id="login" placeholder="Login" />
+				<input type="text" name="pwd" id="pwd" placeholder="Password" />
+				<input type="text" name="port" id="port" placeholder="Port" />
+				<label><input type="checkbox" name="mode" id="mode" hidden><span>Passive mode</span></label>
+				<input type="submit" name="connect" value="Connect" id="connect" />
+			</form>
+		</div>
 
 		<div class="overlay"></div>
 
@@ -72,6 +84,13 @@
 			</form>
 			<div class="matches"><div></div></div>
 			<i>Press ESC to exit</i>
+		</div>
+
+		<div class="wait">
+			<img src="/res/img/load.gif" alt="">
+		</div>
+		<div class="notify">
+			Example!
 		</div>
 
 	</div>
