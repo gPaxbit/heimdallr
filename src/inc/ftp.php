@@ -1,5 +1,6 @@
 <?php
-
+	
+	include $_SERVER['DOCUMENT_ROOT'].'/lib/debug.php';	
 	include $_SERVER['DOCUMENT_ROOT'].'/lib/connect.php';
 
 	function numrows($result) {
@@ -66,6 +67,27 @@
 	echo '<input type="submit" name="save-ftp" value="Save" id="save-ftp" />';
 	echo '<a href="#" class="cancel">Cancel</a>';
 	echo '</form>';
+
+	$select = 'SELECT * FROM [ftp]';
+	$dbg = $db->query($select);
+	$debug = new Console();
+	$h = str_pad('NAME', 20);
+	$h .= str_pad('HOST', 25);
+	$h .= str_pad('LOGIN', 20);
+	$h .= str_pad('PASSWORD', 20);
+	$h .= str_pad('PORT', 1);
+	$debug -> debug($h);
+	while($rw = $dbg->fetchArray(SQLITE3_NUM)) {
+
+		$r = str_pad('['.$rw[0].']', 20);
+		$r .= str_pad('['.$rw[1].']', 25);
+		$r .= str_pad('['.$rw[2].']', 20);
+		$r .= str_pad('['.$rw[3].']', 20);
+		$r .= str_pad('['.$rw[4].']', 1);
+
+		$debug -> debug($r);
+	}
+	$debug -> debug('\r\n');
 
 	$db->close();
 

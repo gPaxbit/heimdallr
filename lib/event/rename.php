@@ -46,6 +46,13 @@
 		}
 	}
 	if($event == 'edit_group') {
-		echo $_POST['rnm-group'];
+		$rnm = $_POST['rnm-group'];
+		$rnm_h = $_POST['rnm-group_h'];
+		$query = 'UPDATE [group] SET [name]="'.$rnm.'" WHERE [name]="'.$rnm_h.'" AND [parent]="'.$src.'"';
+		if($db->query($query)) {
+			$query_u = 'UPDATE ['.$src.'] SET [group]="'.$rnm.'" WHERE [group]="'.$rnm_h.'"';
+			$db->query($query_u);
+			echo $src;
+		} else echo $db->lastErrorMsg();
 	}
 ?>

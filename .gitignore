@@ -1,3 +1,8 @@
 *.db
 *.tmp
 .git
+package.json
+node_modules
+.idea
+.gitignore
+Gruntfile.js

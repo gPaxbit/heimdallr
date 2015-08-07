@@ -1,5 +1,6 @@
 <?php
 
+	include $_SERVER['DOCUMENT_ROOT'].'/lib/debug.php';	
 	include $_SERVER['DOCUMENT_ROOT'].'/lib/connect.php';
 
 	function numrows($result) {
@@ -59,6 +60,21 @@
 	echo '<input type="submit" name="save-pwd" value="Save" id="save-pwd" />';
 	echo '<a href="#" class="cancel">Cancel</a>';
 	echo '</form>';
+
+	$select = 'SELECT * FROM [pwd]';
+	$dbg = $db->query($select);
+	$debug = new Console();
+	$h = str_pad('NAME', 20);
+	$h .= str_pad('LOGIN', 20);
+	$h .= str_pad('PASSWORD', 2);
+	$debug -> debug($h);	
+	while($rw = $dbg->fetchArray(SQLITE3_NUM)) {
+		$r = str_pad('['.$rw[0].']', 20);
+		$r .= str_pad('['.$rw[1].']', 20);
+		$r .= str_pad('['.$rw[2].']', 2);
+		$debug -> debug($r);
+	}
+	$debug -> debug('\r\n');
 		
 	$db->close();
 

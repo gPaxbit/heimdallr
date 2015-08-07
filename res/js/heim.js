@@ -12,8 +12,6 @@ function EscapeSearch() {
 	});
 }
 
-
-
 $(function() {
 	
 	$('.trigger').click(function() {
@@ -80,7 +78,7 @@ $(function() {
 			$blank.find('#port').val($val[3]);
 		}
 
-		console.log($val+" /connect");
+		//console.log($val+" /connect");
 
 		return false;
 	});
