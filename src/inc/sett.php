@@ -1,3 +1,1 @@
-<?php
-	echo $_POST['data'];
-?>
+<?php ?>

@@ -1,3 +1,10 @@
+<?php
+
+	setcookie('style', 'dark', time()+3600);
+	$style = $_COOKIE[style];
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,7 +13,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,700&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
 	
-	<link rel="stylesheet" href="./res/css/main.css" />
+	<link rel="stylesheet" href="./res/css/<?php echo $style; ?>.css" />
 	<link rel="stylesheet" href="./res/css/jquery-ui.min.css" />
 	<link rel="stylesheet" href="./res/css/jscrollpane.css" />
 
@@ -28,21 +35,21 @@
 			<ul class="main">
 				<li><a href="#" data-hash="ftp" class="trigger ftp"><i class="icon">&#xe814;</i>FTP-Access</a>
 					<ul class="sub">
-						<li><a href="#" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
+						<li><a href="#"  data-action="ftp" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
 						<li><a href="#" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
 						<li><a href="#" data-event="connect"><i class="icon">&#xe802;</i>Connect</a></li>
 					</ul>
 				</li>
 				<li><a href="#" data-hash="pwd" class="trigger pwd"><i class="icon">&#xe811;</i>Passwords</a>
 					<ul class="sub">
-						<li><a href="#" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
+						<li><a href="#" data-action="pwd" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
 						<li><a href="#" data-event="add"><i class="icon">&#xe80f;</i>Add item..</a></li>
 					</ul>
 				</li>
 				<li><a href="#" data-hash="note" class="trigger note"><i class="icon">&#xe813;</i>Notes</a>
 					<ul class="sub">
-						<li><a href="#-" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
-						<li><a href="#" data-event="add"><i class="icon">&#xe80f;</i>Add note</a></li>
+						<li><a href="#" data-hash="note" data-event="show"><i class="icon">&#xe810;</i>Show</a></li>
+						<li><a href="#" data-hash="note" data-event="add"><i class="icon">&#xe80f;</i>Add note</a></li>
 					</ul>    
 				</li>
 				<li><a href="#" data-hash="search" class="trigger"><i class="icon">&#xe815;</i>Search</a></li>

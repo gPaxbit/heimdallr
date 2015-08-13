@@ -72,6 +72,13 @@ a:hover { color: #69C0E4; text-decoration: none !important;}
 #result #pwd {width: 60%;min-width: 600px;}
 #result #pwd table td {width: 30%;text-align: left;}
 
+form.style {}
+form.style label {}
+form.style label input {}
+form.style label input:checked + img {}
+form.style label img {}
+form.style [type="submit"] {}
+
 .sideRight {position: fixed;right: -300px;top: 0;width: 280px;max-width: 450px;padding: 20px;height: 100%;background-color: #fff;box-shadow: -1px 0px 15px -6px #555;-webkit-transition: all .3s linear;      -moz-transition: all .3s linear;      -ms-transition: all .3s linear;      -o-transition: all .3s linear;      transition: all .3s linear;}
 .sideRight.active {right: 0px;}
 .sideRight h3 {font-size: 18px;line-height: 1;margin-bottom: 25px;font-weight: 500;color: #444;}
